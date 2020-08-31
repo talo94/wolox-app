@@ -1,0 +1,11 @@
+{
+  "src/**/*.*": [
+      "eclint check"
+    ],
+  "src/**/*.{css,scss}": [
+    "prettier --write"
+  ],
+  "src/**/*.{js,jsx,json,ts,tsx}": [
+    "eslint --fix",
+  ]
+}
