@@ -24,7 +24,7 @@ const Route: FC<Route> = ({
     return <Redirect to={redirectTo || '/home'} />
   }
   if (!token && isPrivate) {
-    return <Redirect to="/" />
+    return <Redirect to="/login" />
   }
 
   return (

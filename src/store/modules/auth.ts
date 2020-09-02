@@ -6,6 +6,7 @@ import { AUTH_API } from 'service'
 export interface LoginFormValues {
   email: string
   password: string | null
+  inSession: boolean
 }
 
 interface AuthResponse {
@@ -20,7 +21,7 @@ export interface AuthStore extends AuthResponse {
 export const defaultState: AuthStore = {
   isSubmitting: false,
   error: null,
-  token: null,
+  token: localStorage.getItem('token') ?? null,
 }
 
 // Actions
@@ -36,10 +37,10 @@ export default handleActions(
       ...state,
       isSubmitting: true,
     }),
-    [`${load}`]: (state: AuthStore, action: Action<AuthResponse>) => ({
+    [`${load}`]: (state: AuthStore, action: Action<any>) => ({
       ...state,
       isSubmitting: false,
-      ...action.payload,
+      token: action.payload,
     }),
     [`${error}`]: (state: AuthStore, action: Action<any>) => ({
       ...state,
@@ -54,8 +55,14 @@ export default handleActions(
 // Saga and Side Effects
 function* authLogin(action: Action<LoginFormValues>) {
   try {
-    const response = yield call(AUTH_API.login, action.payload)
-    yield put(load(response))
+    const { inSession, ...values } = action.payload
+    const { token } = yield call(AUTH_API.login, values)
+
+    if (inSession) {
+      localStorage.setItem('token', token)
+    }
+
+    yield put(load(token))
   } catch (err) {
     yield put(error({ error: err.response.data.message }))
   }

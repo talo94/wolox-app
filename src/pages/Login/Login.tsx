@@ -1,58 +1,56 @@
-import React, { FormEventHandler, useState, ChangeEventHandler } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from 'store/modules/auth'
+import { useForm } from 'react-hook-form'
+import styles from './Login.module.scss'
+import { AUTH_API } from 'service'
 
 const defaultValues = {
   email: '',
   password: '',
   inSession: false,
 }
+type FormValues = typeof defaultValues
+
 const Login = () => {
-  const [values, setValues] = useState(defaultValues)
+  const { handleSubmit, register, errors } = useForm<FormValues>()
   const dispatch = useDispatch()
 
-  const onSubmit: FormEventHandler = (event) => {
-    event.preventDefault()
+  const onSubmit = (values: FormValues) => {
     dispatch(login(values))
-  }
-
-  const onChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
-    setValues({
-      ...values,
-      [target.name]:
-        target.type === 'checkbox' ? !target.checked : target.value,
-    })
   }
 
   return (
     <div>
       <h1>Iniciar Sesión</h1>
-      <form
-        onSubmit={onSubmit}
-        style={{ display: 'flex', flexDirection: 'column' }}
-      >
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <label>Correo</label>
         <input
-          value={values.email}
-          onChange={onChange}
           type="text"
           name="email"
+          ref={register({
+            required: 'El correo es requerida',
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: 'Correo invalido',
+            },
+          })}
         />
+        {errors.email && errors.email.message}
+
         <label>Contraseña</label>
         <input
-          value={values.password}
-          onChange={onChange}
           type="password"
           name="password"
+          ref={register({
+            required: 'La contraseña es requerida',
+          })}
         />
+        {errors.password && errors.password.message}
+
         <label>
           Mantener sesión abierta
-          <input
-            checked={values.inSession}
-            onChange={onChange}
-            name="inSession"
-            type="checkbox"
-          />
+          <input name="inSession" type="checkbox" ref={register} />
         </label>
         <input type="submit" value="Submit" />
       </form>

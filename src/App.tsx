@@ -14,7 +14,7 @@ const App = () => (
         path="/login"
         component={Login}
         forceRedirect
-        redirectTo="/"
+        redirectTo="/tecnologies"
         isPrivate={false}
       />
       <Route exact path="/" component={Home} isPrivate={false} />
