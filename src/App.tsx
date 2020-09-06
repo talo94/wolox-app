@@ -3,8 +3,8 @@ import { BrowserRouter, Switch } from 'react-router-dom'
 
 import Login from 'pages/Login'
 import Home from 'pages/Home'
-import Tecnologies from 'pages/Tecnologies'
 import Route from './components/Route'
+import Technologies from 'pages/Technologies'
 
 const App = () => (
   <BrowserRouter>
@@ -14,11 +14,11 @@ const App = () => (
         path="/login"
         component={Login}
         forceRedirect
-        redirectTo="/tecnologies"
+        redirectTo="/technologies"
         isPrivate={false}
       />
       <Route exact path="/" component={Home} isPrivate={false} />
-      <Route exact path={`/tecnologies`} component={Tecnologies} />
+      <Route exact path={`/technologies`} component={Technologies} />
     </Switch>
   </BrowserRouter>
 )

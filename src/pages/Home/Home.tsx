@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       HOME
-      <Link to={'/tecnologies'}>TECH</Link>
+      <Link to={'/technologies'}>TECH</Link>
     </div>
   )
 }

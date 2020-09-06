@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 import { login } from 'store/modules/auth'
 import { useForm } from 'react-hook-form'
 import styles from './Login.module.scss'
-import { AUTH_API } from 'service'
 
 const defaultValues = {
   email: '',
@@ -52,7 +51,8 @@ const Login = () => {
           Mantener sesión abierta
           <input name="inSession" type="checkbox" ref={register} />
         </label>
-        <input type="submit" value="Submit" />
+
+        <button type="submit">Login</button>
       </form>
     </div>
   )
