@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import App from 'App'
 import configureStore from 'store'
-
+import 'i18n'
 const { store } = configureStore()
 
 ReactDOM.render(
