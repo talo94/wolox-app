@@ -1,41 +1,41 @@
 import { createAction, handleActions, Action } from 'redux-actions'
 import { takeLatest, call, put } from 'redux-saga/effects'
 
-import { TECNOLOGIES_API } from 'service'
-import { TecnologyData } from 'service/tecnologies'
+import { TECHNOLOGIES_API } from 'service'
+import { TechnologyData } from 'service/technologies'
 
-export interface TecnologiesStore {
+export interface TechnologiesStore {
   loading: boolean
-  result: TecnologyData[]
+  result: TechnologyData[]
   error?: any
 }
 
-export const defaultState: TecnologiesStore = {
+export const defaultState: TechnologiesStore = {
   loading: false,
   result: [],
   error: null,
 }
 
 //actions
-export const request = createAction('REQUEST_TECNOLOGIES')
-const load = createAction('LOAD_TECNOLOGIES')
-const error = createAction('ERROR_TECNOLOGIES')
+export const request = createAction('REQUEST_TECHNOLOGIES')
+const load = createAction('LOAD_TECHNOLOGIES')
+const error = createAction('ERROR_TECHNOLOGIES')
 
 //reducer
 export default handleActions(
   {
-    [`${request}`]: (state: TecnologiesStore) => ({
+    [`${request}`]: (state: TechnologiesStore) => ({
       ...state,
     }),
     [`${load}`]: (
-      state: TecnologiesStore,
-      action: Action<TecnologyData[]>
+      state: TechnologiesStore,
+      action: Action<TechnologyData[]>
     ) => ({
       ...state,
       result: action.payload,
     }),
     [`${error}`]: (
-      state: TecnologiesStore,
+      state: TechnologiesStore,
       action: ReturnType<typeof error>
     ) => ({
       ...state,
@@ -47,13 +47,13 @@ export default handleActions(
 // Saga and Side Effects
 function* apiRequest() {
   try {
-    const response = yield call(TECNOLOGIES_API.getTech)
+    const response = yield call(TECHNOLOGIES_API.getTech)
     yield put(load(response))
   } catch (err) {
     yield put(error({ error: err.response.data.message }))
   }
 }
 
-export function* tecnologiesSaga() {
+export function* technologiesSaga() {
   yield takeLatest(`${request}`, apiRequest)
 }

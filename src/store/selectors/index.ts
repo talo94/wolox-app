@@ -1,2 +1,2 @@
 export * from './auth'
-export * from './tecnologies'
+export * from './technologies'

@@ -1,3 +1,3 @@
 import * as AUTH_API from './auth_api'
-import * as TECNOLOGIES_API from './tecnologies'
-export { AUTH_API, TECNOLOGIES_API }
+import * as TECHNOLOGIES_API from './technologies'
+export { AUTH_API, TECHNOLOGIES_API }
