@@ -1,7 +1,52 @@
 .header-container {
-  margin: 40px;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   width: 150px;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.loginButton {
+  border: 1px solid #29a5dd;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px 40px;
+}
+.loginButton:hover {
+  background: #29a5dd;
+  animation-name: example;
+  animation-duration: 1s;
+}
+.translateButton {
+  border: 1px solid #29a5dd;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+
+.translateButton:focus {
+  outline-style: none;
+}
+.translateButton:hover {
+  background: #29a5dd;
+  animation-name: example;
+  animation-duration: 1s;
+}
+@keyframes example {
+  from {
+    background-color: transparent;
+    color: black;
+  }
+  to {
+    background-color: #29a5dd;
+    color: white;
+  }
 }

@@ -1,0 +1,37 @@
+.benefits {
+  grid-area: benefits;
+  width: 100%;
+  background-color: white;
+}
+.benefitsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  @media screen and (max-width: 650) {
+    padding-bottom: 50px;
+  }
+}
+
+.benefitsTitle {
+  text-align: center;
+  padding: 70px 0px;
+  margin: 0px;
+  font-size: 1.5rem;
+}
+.benefitsText {
+  text-align: center;
+  max-width: 150px;
+  font-family: 'MonserratLight';
+}
+.benefitsFace {
+  text-align: center;
+  padding: 70px 0px;
+  margin: 0px 15px;
+  font-size: 1.5rem;
+  color: #29a5dd;
+}
+.benefitsTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

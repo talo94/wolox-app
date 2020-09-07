@@ -1,0 +1,18 @@
+.requirementsLeft {
+  grid-area: requirementsLeft;
+  background-color: white;
+}
+.requirementsRight {
+  grid-area: requirementsRight;
+  background-color: white;
+  padding: 80px 0px;
+}
+.requirementsList {
+  display: flex;
+  max-width: 80%;
+}
+.requirementsText {
+  font-family: 'MonserratLight';
+  padding-left: 10px;
+  font-size: 0.8rem;
+}

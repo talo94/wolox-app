@@ -1,0 +1,32 @@
+.welcomeContainer {
+  margin: 100px 0px 0px 40px;
+}
+.welcomeLeft {
+  grid-area: welcomeLeft;
+  @media screen and (max-width: 650px) {
+    margin-bottom: 100px;
+    justify-self: flex-start;
+  }
+}
+
+.lightText {
+  font-family: 'MonserratLight';
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.boldText {
+  font-family: 'Montserratbold';
+  margin: 0px 10px 0px 0px;
+  font-size: 2rem;
+}
+.greenText {
+  font-family: 'Montserratbold';
+  color: #a3cc38;
+  font-size: 2rem;
+  margin: 0px 10px 0px 0px;
+}
+
+.textContainer {
+  display: flex;
+}

@@ -1,0 +1,42 @@
+.woloxersRight {
+  grid-area: woloxersRight;
+  background-color: #eef3fe;
+  @media screen and (max-width: 650) {
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 100px;
+  }
+}
+
+.woloxersContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.normalText {
+  margin: 0px;
+  font-size: 2rem;
+}
+.textContainer {
+  display: flex;
+}
+
+.blueTextBold {
+  font-family: 'Montserratbold';
+  color: #29a5dd;
+  font-size: 2rem;
+  margin: 0px 10px 0px 0px;
+}
+.greenText {
+  font-family: 'Montserratbold';
+  color: #a3cc38;
+  font-size: 2rem;
+  margin: 0px 10px 0px 0px;
+}
+.normalText {
+  margin: 0px;
+  font-size: 2rem;
+}
