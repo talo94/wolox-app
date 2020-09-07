@@ -38,6 +38,11 @@
     "app login button": "Entrar",
     "app login error email": "Correo inválido",
     "app login error emailrequerido": "El correo es requerido",
-    "app login error contraseñarequerida": "La contraseña es requerida"
+    "app login error contraseñarequerida": "La contraseña es requerida",
+    "app tech author": "Autor:",
+    "app tech license": "Licencia:",
+    "app tech language": "Lenguaje:",
+    "app tech type": "Tipo:",
+    "app tech title": "Technologies"
   }
 }

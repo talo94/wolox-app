@@ -17,17 +17,17 @@ const Header = () => {
       <Link to={'/'} className={styles.links}>
         <img src={logo} alt="Wolox Logo" className={styles.logo} />
       </Link>
-      <a href="#welcomeLeft" className={styles.links}>
+      <a href="/#welcomeLeft" className={styles.links}>
         {t('app header home link')}
       </a>
       <Link to={'/technologies'} className={styles.links}>
         {t('app header technologies link')}
       </Link>
-      <a href="#benefits" className={styles.links}>
+      <a href="/#benefits" className={styles.links}>
         {t('app header benefits link')}
       </a>
 
-      <a href="#requirementsLeft" className={styles.links}>
+      <a href="/#requirementsLeft" className={styles.links}>
         {t('app header requirements link')}
       </a>
       <Link to={'/login'} className={styles.loginButton}>
