@@ -1,0 +1,17 @@
+.items {
+  justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.textTitle {
+  margin: 0px 15px 10px 10px;
+  color: #a3cc38;
+  font-family: 'Montserratbold';
+  font-size: 0.8rem;
+}
+.text {
+  font-size: 1rem;
+  margin: 0px;
+}
