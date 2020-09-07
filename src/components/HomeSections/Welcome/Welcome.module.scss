@@ -1,18 +1,22 @@
 .welcomeContainer {
   margin: 100px 0px 0px 40px;
+  @media (max-width: 650px) {
+    margin: 0px 15px;
+  }
 }
 .welcomeLeft {
   grid-area: welcomeLeft;
-  @media screen and (max-width: 650px) {
-    margin-bottom: 100px;
+  @media (max-width: 650px) {
+    margin-bottom: 50px;
     justify-self: flex-start;
   }
 }
 
 .lightText {
   font-family: 'MonserratLight';
-  font-size: 2rem;
+
   margin: 0px;
+  font-size: 2rem;
 }
 
 .boldText {
@@ -23,10 +27,21 @@
 .greenText {
   font-family: 'Montserratbold';
   color: #a3cc38;
-  font-size: 2rem;
+
   margin: 0px 10px 0px 0px;
+  font-size: 2rem;
 }
 
 .textContainer {
   display: flex;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 830px) {
+  .lightText,
+  .boldText,
+  .greenText,
+  .textContainer {
+    font-size: 1.5rem;
+  }
 }

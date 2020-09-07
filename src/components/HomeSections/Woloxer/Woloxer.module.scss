@@ -1,10 +1,10 @@
 .woloxersRight {
   grid-area: woloxersRight;
   background-color: #eef3fe;
-  @media screen and (max-width: 650) {
+  @media (max-width: 650px) {
     justify-self: stretch;
     align-self: stretch;
-    padding: 100px;
+    padding: 20px 0px;
   }
 }
 

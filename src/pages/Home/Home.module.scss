@@ -13,7 +13,7 @@
     'requirementsLeft requirementsRight';
   justify-items: stretch;
   align-items: stretch;
-  @media screen and (max-width: 650) {
+  @media (max-width: 650px) {
     grid-template-columns: 100%;
     justify-items: center;
     grid-template-areas:
@@ -41,16 +41,21 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 40%;
+  width: 80%;
   justify-content: center;
-  margin: 0px 40px;
   font-family: 'MonserratLight';
-  font-size: 1.5rem;
+
+  @media (max-width: 850px) {
+    width: 100%;
+    margin: 0px;
+  }
 }
 .techText {
-  @media screen and (max-width: 650) {
-    font-size: 2rem;
-    margin: 100px 0px;
+  font-size: 2rem;
+  margin: 0px 0px 0px 40px;
+  @media (max-width: 650px) {
+    font-size: 1.2rem;
+    margin: 100px 15px;
   }
 }
 .techRight {
@@ -75,4 +80,9 @@
   width: 100%;
   font-family: 'MonserratBold';
   font-size: 1.5rem;
+}
+@media (max-width: 850px) {
+  .images {
+    width: 100%;
+  }
 }

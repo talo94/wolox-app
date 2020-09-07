@@ -23,7 +23,7 @@ const Home = () => {
       <div className={styles.container}>
         <Welcome />
         <div id="welcomeRight" className={styles.welcomeRight}>
-          <img src={Ic_ilustra_Hero} alt="hero" />
+          <img src={Ic_ilustra_Hero} alt="hero" className={styles.images} />
         </div>
         <div id="techLeft" className={styles.techLeft}>
           <div className={styles.techContainer}>
@@ -31,7 +31,11 @@ const Home = () => {
           </div>
         </div>
         <div id="techRight" className={styles.techRight}>
-          <img src={Ic_Tecnologys} alt="tecnologies" />
+          <img
+            src={Ic_Tecnologys}
+            alt="tecnologies"
+            className={styles.images}
+          />
         </div>
         <div id="woloxersLeft" className={styles.woloxersLeft}>
           <img src={img_woloxer} className={styles.woloxImg} alt="woloxer" />
