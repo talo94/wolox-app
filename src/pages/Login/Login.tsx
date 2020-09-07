@@ -1,10 +1,12 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 import { login } from 'store/modules/auth'
-import { useForm } from 'react-hook-form'
 import styles from './Login.module.scss'
+import logo from 'assets/logo_full_color.svg'
 
 const defaultValues = {
   email: '',
@@ -27,6 +29,9 @@ const Login = () => {
   const contraseñarequerida = t('app login error emailrequerido')
   return (
     <div className={styles.mainContainer}>
+      <Link to={'/'} className={styles.logo}>
+        <img src={logo} alt="Wolox Logo" className={styles.imglogo} />
+      </Link>
       <h1>{t('app login title')}</h1>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <label className={styles.blueText}>{t('app login email')}</label>
