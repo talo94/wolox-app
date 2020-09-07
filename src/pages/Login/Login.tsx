@@ -25,8 +25,8 @@ const Login = () => {
   }
 
   const emailrequerido = t('app login error emailrequerido')
-  const message = t('app login error message')
-  const contraseñarequerida = t('app login error emailrequerido')
+  const message = t('app login error email')
+  const contraseñarequerida = t('app login error contraseñarequerida')
   return (
     <div className={styles.mainContainer}>
       <Link to={'/'} className={styles.logo}>
@@ -48,7 +48,8 @@ const Login = () => {
             },
           })}
         />
-        {errors.email && errors.email.message}
+
+        <p className={styles.error}>{errors.email && errors.email.message}</p>
 
         <label className={styles.blueText}>{t('app login password')}</label>
         <input
@@ -59,7 +60,9 @@ const Login = () => {
             required: contraseñarequerida,
           })}
         />
-        {errors.password && errors.password.message}
+        <p className={styles.error}>
+          {errors.password && errors.password.message}
+        </p>
 
         <label className={styles.sesion}>
           {t('app login session')}
