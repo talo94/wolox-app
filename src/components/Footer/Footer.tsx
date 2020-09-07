@@ -14,9 +14,10 @@ const Footer = () => {
         <p className={styles.blueText}>{t('app home thanks tocomplete')}</p>
       </div>
       <p className={styles.footerText}>{t('app home thanks more')}</p>
-      <button className={styles.footerButton}>
+
+      <a href={'https://www.wolox.com.ar/'} className={styles.footerButton}>
         {t('app home thanks moreinfo')}
-      </button>
+      </a>
       <img
         className={styles.footerLogo}
         src={Ic_Wolox_Footer}
