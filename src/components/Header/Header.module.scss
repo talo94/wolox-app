@@ -21,7 +21,7 @@
 }
 .loginButton:hover {
   background: #29a5dd;
-  animation-name: example;
+  animation-name: animation;
   animation-duration: 1s;
 }
 .translateButton {
@@ -37,11 +37,11 @@
 }
 .translateButton:hover {
   background: #29a5dd;
-  animation-name: example;
+  animation-name: animation;
   animation-duration: 1s;
   color: white;
 }
-@keyframes example {
+@keyframes animation {
   from {
     background-color: transparent;
     color: black;
