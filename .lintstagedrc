@@ -5,7 +5,7 @@
   "src/**/*.{css,scss}": [
     "prettier --write"
   ],
-  "src/**/*.{js,jsx,json,ts,tsx}": [
+  "src/**/*.{js,jsx,ts,tsx}": [
     "eslint --fix",
   ]
 }

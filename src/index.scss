@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Montserratbold';
+  src: url('./assets/Fonts/Montserrat/Montserrat-Bold.ttf');
+}
+@font-face {
+  font-family: 'MonserratLight';
+  src: url('./assets/Fonts/Montserrat/Montserrat-Light.ttf');
+}
+@font-face {
+  font-family: 'MonserratMedium';
+  src: url('./assets/Fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+:root,
+*,
+*:after,
+*:before {
+  font-family: MonserratMedium;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+a:visited {
+  color: black;
+}

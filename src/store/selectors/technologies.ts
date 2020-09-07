@@ -14,8 +14,8 @@ export const filterTechnologies = (filter: string, sort: SortType) =>
       .filter(({ tech, type }) => {
         const filterLow = filter.toLowerCase()
         return (
-          tech.toLowerCase().includes(filter) ||
-          type.toLowerCase().includes(filter)
+          tech.toLowerCase().includes(filterLow) ||
+          type.toLowerCase().includes(filterLow)
         )
       })
       .sort(({ tech: techA }, { tech: techB }) => {

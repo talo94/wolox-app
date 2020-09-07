@@ -1,0 +1,88 @@
+.main {
+  background-image: url('../../assets/Backgrounds/Bg_Header.png');
+}
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'welcomeLeft welcomeRight'
+    'techLeft techRight'
+    'woloxersLeft woloxersRight'
+    'benefits benefits'
+    'requirementsLeft requirementsRight';
+  justify-items: stretch;
+  align-items: stretch;
+  @media (max-width: 650px) {
+    grid-template-columns: 100%;
+    justify-items: center;
+    grid-template-areas:
+      'welcomeLeft'
+      'welcomeRight'
+      'techLeft'
+      'techRight'
+      'woloxersLeft'
+      'woloxersRight'
+      'benefits'
+      'requirementsLeft'
+      'requirementsRight';
+  }
+}
+.welcomeRight {
+  grid-area: welcomeRight;
+}
+.techLeft {
+  grid-area: techLeft;
+  background-color: white;
+}
+
+.techContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+  font-family: 'MonserratLight';
+
+  @media (max-width: 850px) {
+    width: 100%;
+    margin: 0px;
+  }
+}
+.techText {
+  font-size: 2rem;
+  margin: 0px 0px 0px 40px;
+  @media (max-width: 650px) {
+    font-size: 1.2rem;
+    margin: 100px 15px;
+  }
+}
+.techRight {
+  grid-area: techRight;
+  background-color: white;
+}
+.woloxersLeft {
+  grid-area: woloxersLeft;
+  background-image: url('../../assets/img_woloxer.png');
+}
+.woloxImg {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.requirementsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: 'MonserratBold';
+  font-size: 1.5rem;
+}
+@media (max-width: 850px) {
+  .images {
+    width: 100%;
+  }
+}
