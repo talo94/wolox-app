@@ -5,7 +5,6 @@ import Header from 'components/Header'
 import styles from './Home.module.scss'
 import Ic_ilustra_Hero from 'assets/Img Hero/Ic_ilustra_Hero.png'
 import Ic_Tecnologys from 'assets/Ic_Tecnologys.svg'
-import img_woloxer from 'assets/img_woloxer.png'
 
 import {
   Welcome,
@@ -14,6 +13,7 @@ import {
   Requirements,
 } from 'components/HomeSections'
 import Footer from 'components/Footer'
+import WoloxerLeft from 'components/HomeSections/WoloxerLeft'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -37,9 +37,7 @@ const Home = () => {
             className={styles.images}
           />
         </div>
-        <div id="woloxersLeft" className={styles.woloxersLeft}>
-          <img src={img_woloxer} className={styles.woloxImg} alt="woloxer" />
-        </div>
+        <WoloxerLeft />
         <Woloxer />
         <Benefits />
         <div id="requirementsLeft" className={styles.requirementsLeft}>
