@@ -1,7 +1,70 @@
 .form {
   display: flex;
   flex-direction: column;
+  min-width: 250px;
 }
 
-.main-container {
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../../assets/Backgrounds/Bg_Header.png');
+}
+.blueText {
+  font-family: 'MonserratMedium';
+  color: #29a5dd;
+  font-size: 2rem;
+  margin: 20px 0px 10px;
+}
+
+.input {
+  background: white;
+  border: none;
+  border-bottom: 1px solid #29a5dd;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+.input:focus {
+  outline-style: none;
+  border-bottom: 2px solid #29a5dd;
+  background-color: #d9f0fb;
+}
+.sesion {
+  margin: 20px 0px;
+  font-family: 'MonserratLight';
+  font-size: 1rem;
+}
+.checkbox {
+  margin-left: 25px;
+}
+
+.loginButton {
+  background-color: #29a5dd;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 15px 40px;
+  border: none;
+  color: white;
+}
+
+.loginButton:focus {
+  outline-style: none;
+  border-bottom: 2px solid #29a5dd;
+  background-color: #d9f0fb;
+}
+
+.loginButton:hover {
+  background: #29a5dd;
+  animation-name: animation;
+  animation-duration: 1s;
+}
+@keyframes animation {
+  from {
+    background-color: #29a5dd;
+  }
+  to {
+    background-color: #a3cc38;
+  }
 }

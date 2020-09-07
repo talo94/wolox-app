@@ -1,5 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
+
 import { login } from 'store/modules/auth'
 import { useForm } from 'react-hook-form'
 import styles from './Login.module.scss'
@@ -14,45 +16,60 @@ type FormValues = typeof defaultValues
 const Login = () => {
   const { handleSubmit, register, errors } = useForm<FormValues>()
   const dispatch = useDispatch()
+  const { t } = useTranslation()
 
   const onSubmit = (values: FormValues) => {
     dispatch(login(values))
   }
 
+  const emailrequerido = t('app login error emailrequerido')
+  const message = t('app login error message')
+  const contraseñarequerida = t('app login error emailrequerido')
   return (
-    <div>
-      <h1>Iniciar Sesión</h1>
+    <div className={styles.mainContainer}>
+      <h1>{t('app login title')}</h1>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <label>Correo</label>
+        <label className={styles.blueText}>{t('app login email')}</label>
+
         <input
           type="text"
           name="email"
+          className={styles.input}
           ref={register({
-            required: 'El correo es requerida',
+            required: emailrequerido,
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Correo invalido',
+              message: message,
             },
           })}
         />
         {errors.email && errors.email.message}
 
-        <label>Contraseña</label>
+        <label className={styles.blueText}>{t('app login password')}</label>
         <input
           type="password"
           name="password"
+          className={styles.input}
           ref={register({
-            required: 'La contraseña es requerida',
+            required: contraseñarequerida,
           })}
         />
         {errors.password && errors.password.message}
 
-        <label>
-          Mantener sesión abierta
-          <input name="inSession" type="checkbox" ref={register} />
+        <label className={styles.sesion}>
+          {t('app login session')}
+
+          <input
+            name="inSession"
+            type="checkbox"
+            ref={register}
+            className={styles.checkbox}
+          />
         </label>
 
-        <button type="submit">Login</button>
+        <button type="submit" className={styles.loginButton}>
+          {t('app login button')}
+        </button>
       </form>
     </div>
   )
