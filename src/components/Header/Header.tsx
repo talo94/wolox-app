@@ -6,6 +6,7 @@ import { useSelector, shallowEqual } from 'react-redux'
 import logo from 'assets/logo_full_color.svg'
 import { selectToken } from 'store/selectors'
 import styles from './Header.module.scss'
+import Menu from 'components/Menu'
 
 const lenguages = ['en', 'es']
 
@@ -17,40 +18,43 @@ const Header = () => {
     i18n.changeLanguage(lang)
   }
   return (
-    <div className={styles['header-container']}>
-      <Link to={'/'} className={styles.links}>
-        <img src={logo} alt="Wolox Logo" className={styles.logo} />
-      </Link>
-      <a href="/#welcomeLeft" className={styles.links}>
-        {t('app header home link')}
-      </a>
-      <Link to={'/technologies'} className={styles.links}>
-        {t('app header technologies link')}
-      </Link>
-      <a href="/#benefits" className={styles.links}>
-        {t('app header benefits link')}
-      </a>
-
-      <a href="/#requirementsLeft" className={styles.links}>
-        {t('app header requirements link')}
-      </a>
-      {!token && (
-        <Link to={'/login'} className={styles.loginButton}>
-          {t('app header login button')}
+    <>
+      <Menu />
+      <div className={styles['header-container']}>
+        <Link to={'/'} className={styles.links}>
+          <img src={logo} alt="Wolox Logo" className={styles.logo} />
         </Link>
-      )}
-      {lenguages
-        .filter((lang) => lang !== (i18n.language || 'en'))
-        .map((lang) => (
-          <button
-            type="button"
-            className={styles.translateButton}
-            onClick={() => onSwapLanguage(lang)}
-          >
-            {`${t('app header translate button')} ${lang}`}
-          </button>
-        ))}
-    </div>
+        <a href="/#welcomeLeft" className={styles.links}>
+          {t('app header home link')}
+        </a>
+        <Link to={'/technologies'} className={styles.links}>
+          {t('app header technologies link')}
+        </Link>
+        <a href="/#benefits" className={styles.links}>
+          {t('app header benefits link')}
+        </a>
+
+        <a href="/#requirementsLeft" className={styles.links}>
+          {t('app header requirements link')}
+        </a>
+        {!token && (
+          <Link to={'/login'} className={styles.loginButton}>
+            {t('app header login button')}
+          </Link>
+        )}
+        {lenguages
+          .filter((lang) => lang !== (i18n.language || 'en'))
+          .map((lang) => (
+            <button
+              type="button"
+              className={styles.translateButton}
+              onClick={() => onSwapLanguage(lang)}
+            >
+              {lang}
+            </button>
+          ))}
+      </div>
+    </>
   )
 }
 export default Header

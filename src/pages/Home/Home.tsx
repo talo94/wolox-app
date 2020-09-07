@@ -14,12 +14,14 @@ import {
 } from 'components/HomeSections'
 import Footer from 'components/Footer'
 import WoloxerLeft from 'components/HomeSections/WoloxerLeft'
+import Menu from 'components/Menu'
 
 const Home = () => {
   const { t } = useTranslation()
   return (
     <div className={styles.main}>
       <Header />
+
       <div className={styles.container}>
         <Welcome />
         <div id="welcomeRight" className={styles.welcomeRight}>
