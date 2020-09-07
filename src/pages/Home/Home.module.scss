@@ -62,6 +62,15 @@
   grid-area: techRight;
   background-color: white;
 }
+.woloxersLeft {
+  grid-area: woloxersLeft;
+  background-image: url('../../assets/img_woloxer.png');
+}
+.woloxImg {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
 
 .requirementsContainer {
   display: flex;
@@ -75,33 +84,5 @@
 @media (max-width: 850px) {
   .images {
     width: 100%;
-  }
-}
-
-.translateButton {
-  border: 1px solid #29a5dd;
-  border-radius: 20px;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: transparent;
-}
-
-.translateButton:focus {
-  outline-style: none;
-}
-.translateButton:hover {
-  background: #29a5dd;
-  animation-name: animation;
-  animation-duration: 1s;
-  color: white;
-}
-@keyframes animation {
-  from {
-    background-color: transparent;
-    color: black;
-  }
-  to {
-    background-color: #29a5dd;
-    color: white;
   }
 }
