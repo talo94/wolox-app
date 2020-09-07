@@ -47,11 +47,11 @@ const Technologies = () => {
         <input onChange={onChange} value={filter} className={styles.input} />
         <button onClick={onSort} type="button" className={styles.sortButton}>
           {!sort ? (
-            <img src={asc} className={styles.icon} />
+            <img src={asc} className={styles.icon} alt={'asc filter'} />
           ) : sort === 'ASC' ? (
-            <img src={desc} className={styles.icon} />
+            <img src={desc} className={styles.icon} alt={'desc filter'} />
           ) : (
-            <img src={no} className={styles.icon} />
+            <img src={no} className={styles.icon} alt={'no filter'} />
           )}
         </button>
       </div>
