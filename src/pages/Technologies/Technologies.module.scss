@@ -1,0 +1,65 @@
+.technologiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sortButton {
+  background-color: #29a5dd;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 15px;
+  border: none;
+  color: white;
+}
+
+.sortButton:focus {
+  outline-style: none;
+  background-color: #d9f0fb;
+}
+
+.sortButton:hover {
+  background-color: #a3cc38;
+  animation-name: animation;
+  animation-duration: 1s;
+}
+@keyframes animation {
+  from {
+    background-color: #29a5dd;
+  }
+  to {
+    background-color: #a3cc38;
+  }
+}
+
+.icon {
+  width: 15px;
+}
+
+.input {
+  background: white;
+  margin: 0px 20px;
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid #29a5dd;
+  background-color: #d9f0fb;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+  @media (max-width: 650px) {
+    width: 80%;
+  }
+}
+.input:focus {
+  outline-style: none;
+  border-bottom: 2px solid #29a5dd;
+  background-color: #d9f0fb;
+}
+
+.title {
+  text-align: center;
+}
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  margin: 60px 10px 10px;
+}

@@ -1,0 +1,47 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 0 0 20px 6px #c5c5c52b;
+  border-radius: 10px;
+  justify-content: center;
+  margin: 10px;
+  align-items: center;
+  padding: 20px 10px 10px;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}
+.content {
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.title {
+  font-family: 'Montserratbold';
+  color: #29a5dd;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0px 0px 10px;
+}
+
+.year {
+  font-family: 'MonserratLight';
+  margin: 0px 0px 15px;
+  font-size: 0.5rem;
+}
+
+.logo {
+  width: 100px;
+  clip-path: circle(50px at center);
+}
+
+.imgContainer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,49 @@
+.footer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.footerTextContainer {
+  display: flex;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+.normalText {
+  margin: 0px;
+  font-size: 2rem;
+}
+.blueText {
+  font-family: 'MonserratMedium';
+  color: #29a5dd;
+  font-size: 2rem;
+  margin: 0px 10px;
+}
+.footerText {
+  font-family: 'MonserratLight';
+  font-size: 1.5rem;
+  margin: 10px 0px 20px 0px;
+}
+.footerButton {
+  margin-top: 10px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px 40px;
+  background-color: #29a5dd;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(230, 223, 230, 0.68);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(230, 223, 230, 0.68);
+  box-shadow: 0px 0px 10px 3px rgba(230, 223, 230, 0.68);
+}
+.footerButton:visited {
+  color: white;
+}
+.footerLogo {
+  margin: 150px 0px 30px;
+}

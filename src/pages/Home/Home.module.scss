@@ -1,0 +1,107 @@
+.main {
+  background-image: url('../../assets/Backgrounds/Bg_Header.png');
+}
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'welcomeLeft welcomeRight'
+    'techLeft techRight'
+    'woloxersLeft woloxersRight'
+    'benefits benefits'
+    'requirementsLeft requirementsRight';
+  justify-items: stretch;
+  align-items: stretch;
+  @media (max-width: 650px) {
+    grid-template-columns: 100%;
+    justify-items: center;
+    grid-template-areas:
+      'welcomeLeft'
+      'welcomeRight'
+      'techLeft'
+      'techRight'
+      'woloxersLeft'
+      'woloxersRight'
+      'benefits'
+      'requirementsLeft'
+      'requirementsRight';
+  }
+}
+.welcomeRight {
+  grid-area: welcomeRight;
+}
+.techLeft {
+  grid-area: techLeft;
+  background-color: white;
+}
+
+.techContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+  font-family: 'MonserratLight';
+
+  @media (max-width: 850px) {
+    width: 100%;
+    margin: 0px;
+  }
+}
+.techText {
+  font-size: 2rem;
+  margin: 0px 0px 0px 40px;
+  @media (max-width: 650px) {
+    font-size: 1.2rem;
+    margin: 100px 15px;
+  }
+}
+.techRight {
+  grid-area: techRight;
+  background-color: white;
+}
+
+.requirementsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: 'MonserratBold';
+  font-size: 1.5rem;
+}
+@media (max-width: 850px) {
+  .images {
+    width: 100%;
+  }
+}
+
+.translateButton {
+  border: 1px solid #29a5dd;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+
+.translateButton:focus {
+  outline-style: none;
+}
+.translateButton:hover {
+  background: #29a5dd;
+  animation-name: animation;
+  animation-duration: 1s;
+  color: white;
+}
+@keyframes animation {
+  from {
+    background-color: transparent;
+    color: black;
+  }
+  to {
+    background-color: #29a5dd;
+    color: white;
+  }
+}
