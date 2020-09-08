@@ -3,6 +3,7 @@ import { useSelector, shallowEqual } from 'react-redux'
 import { Route as ReactRouter, Redirect, RouteProps } from 'react-router-dom'
 
 import { selectToken } from 'store/selectors'
+import ErrorBoundary from 'components/ErrorBoundary'
 
 interface Route extends RouteProps {
   component: ComponentType<any>
@@ -30,7 +31,11 @@ const Route: FC<Route> = ({
   return (
     <ReactRouter
       {...props}
-      render={(matchProps) => <Component {...matchProps} />}
+      render={(matchProps) => (
+        <ErrorBoundary>
+          <Component {...matchProps} />
+        </ErrorBoundary>
+      )}
     />
   )
 }
