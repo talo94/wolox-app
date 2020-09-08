@@ -5,7 +5,6 @@ import Header from 'components/Header'
 import styles from './Home.module.scss'
 import Ic_ilustra_Hero from 'assets/Img Hero/Ic_ilustra_Hero.png'
 import Ic_Tecnologys from 'assets/Ic_Tecnologys.svg'
-
 import {
   Welcome,
   Woloxer,
@@ -14,7 +13,6 @@ import {
 } from 'components/HomeSections'
 import Footer from 'components/Footer'
 import WoloxerLeft from 'components/HomeSections/WoloxerLeft'
-import Menu from 'components/Menu'
 
 const Home = () => {
   const { t } = useTranslation()
